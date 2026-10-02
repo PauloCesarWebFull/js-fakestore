@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakestore</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <header class="flex items-center justify-between px-15 py-4 bg-blue-300">
+        <div>
+            <input onkeyup="pesquisarProdutos(event.target.value)" type="text" placeholder="Digite o nome do produto" class="w-120 h-10 rounded bg-white pl-4" />
+        </div>
+        <div>
+            <select id="categorias" onchange="filtrarProdutos(event.target.value)" class="h-10 rounded bg-white px-4">
+                <option selected disabled>Filtrar produtos</option>
+                <option value="All">All</option>
+                <option>Men's clothing</option>
+                <option>women's clothing</option>
+                <option>electronics</option>
+                <option>jewelery</option>
+            </select>
+            <select id="ordenacao" onchange="ordenarProdutos(event.target.value)" class="h-10 rounded bg-white px-4">
+                <option selected disabled>Ordernar produtos</option>
+                <option value="preco">Ordernar por Preço</option>
+                <option value="nota">Ordernar por Avaliação</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="p-15 bg-slate-200">
+        <div id="cards" class="grid grid-cols-4 gap-4">
+            
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
